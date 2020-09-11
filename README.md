@@ -3,6 +3,9 @@
 
 
 ## To Build
+
+
+### Clone Repo
 ```sh
 $ git clone https://github.com/T31K/A-Piece-of-Pi
 ```
