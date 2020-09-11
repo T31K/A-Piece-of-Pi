@@ -42,13 +42,7 @@
   width: 100px;
 }
 
-<<<<<<< HEAD
-=======
-.bg{
-  background: #09a3d5;
- 
-}
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
+
 
 /* Terminal Window */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700);
@@ -57,7 +51,6 @@
   margin: 0;
 }
 
-<<<<<<< HEAD
 body {      
   background: #09a3d5;
 }
@@ -77,21 +70,6 @@ body {
 
 .window-inner {
 
-=======
-body {
-  -webkit-box-align: center;
-          align-items: center;
-  background: #09a3d5;
-  display: -webkit-box;
-  font: bold 16px "Lato", arial, sans-serif;
-  height: 100vh;
-  -webkit-box-pack: center;
-          justify-content: center;
-  width: 100vw;
-}
-
-.window {
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
   background: #ddd;
   border-radius: 10px;
   display: -webkit-box;
@@ -112,11 +90,7 @@ body {
 }
 
 .icons {
-<<<<<<< HEAD
   padding: 0.7em;
-=======
-  padding: 0.5em;
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
   position: absolute;
 }
 .icons span {
@@ -134,13 +108,8 @@ body {
 .icons span, .icons:before, .icons:after {
   display: inline-block;
   float: left;
-<<<<<<< HEAD
   width: 0.75em;
   height: 0.75em;
-=======
-  width: 0.5em;
-  height: 0.5em;
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
   border-radius: 50%;
   margin-right: 0.3em;
 }
@@ -149,11 +118,7 @@ pre {
   background: #222;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-<<<<<<< HEAD
   color: #bbb;
-=======
-  color: #fff;
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
   overflow: hidden;
   padding: 2.0em;
   width: 100%;
@@ -211,18 +176,6 @@ pre code:after {
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-=======
-/* @media(max-width: 20px) {
-  pre {
-    font-size: 10px;
-  }
-
-  .window {
-    width: 300px;
-  }
-} */
->>>>>>> 6f3fe7df2b446aec1099ee00360531e1acac5de0
 
 .btn-bg{
   background: #222 !important
