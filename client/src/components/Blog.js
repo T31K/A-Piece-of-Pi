@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Container from "react-bootstrap/Container"
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -11,6 +12,7 @@ class Blog extends Component {
       this.state = {
         posts: [],
       }
+
     }
   
     componentDidMount(){
@@ -21,18 +23,23 @@ class Blog extends Component {
   
   
     render(){
+
         return(
+        <Router>
         <Container className="pl-5 pr-5 mx-auto">
             <Row>
             <Col>
                 {this.state.posts.map( (post,index) => (
-                
 
+                
                 <div className="window-inner mb-4 mx-auto" key={index}>
                     <div className="icons"><span></span></div>
-                    <div className="title">>_ {post.title.toLowerCase()}</div>
+                    
+                    <div className="title">_ {post.title.toLowerCase()}</div>
                         <pre className="lang-python">   
+
                             <code>
+
                                 <img className="picture rounded mx-auto" src={post.image} alt="image"/>
                             </code>
                         </pre>
@@ -46,6 +53,7 @@ class Blog extends Component {
             </Col>
             </Row>
             </Container>
+             </Router>
         )
     }
 }

@@ -1,8 +1,8 @@
-var express = require('express')
+const express = require('express')
 const mongoose = require('mongoose')
 const Blogpost = require('../models/blogpost')
-var router = express.Router()
-const id_number = '5f573541ecd61e0b12dd174c'
+const router = express.Router()
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
   Blogpost.find((err, blogpost) => {
@@ -11,4 +11,15 @@ router.get('/', (req, res, next) => {
   })
 });
 
+router.get("/:id" , (req, res, next) => {
+  Blogpost.findById(req.params.id, (err, foundBlogpost) => {
+    if (err){
+      console.log(err)
+    } else {
+      console.log("found bltpost")
+      console.log(foundBlogpost)
+      res.json(foundBlogpost)
+    }
+  })
+})
 module.exports = router;
