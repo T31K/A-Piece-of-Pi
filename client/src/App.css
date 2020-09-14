@@ -42,10 +42,7 @@
   width: 100px;
 }
 
-.bg{
-  background: #09a3d5;
- 
-}
+
 
 /* Terminal Window */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700);
@@ -54,19 +51,25 @@
   margin: 0;
 }
 
-body {
-  -webkit-box-align: center;
-          align-items: center;
+body {      
   background: #09a3d5;
-  display: -webkit-box;
-  font: bold 16px "Lato", arial, sans-serif;
-  height: 100vh;
-  -webkit-box-pack: center;
-          justify-content: center;
-  width: 100vw;
 }
 
 .window {
+  background: #ddd;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  position: relative;
+ 
+
+}
+
+.window-inner {
+
   background: #ddd;
   border-radius: 10px;
   display: -webkit-box;
@@ -87,7 +90,7 @@ body {
 }
 
 .icons {
-  padding: 0.5em;
+  padding: 0.7em;
   position: absolute;
 }
 .icons span {
@@ -105,8 +108,8 @@ body {
 .icons span, .icons:before, .icons:after {
   display: inline-block;
   float: left;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.75em;
+  height: 0.75em;
   border-radius: 50%;
   margin-right: 0.3em;
 }
@@ -115,7 +118,7 @@ pre {
   background: #222;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  color: #fff;
+  color: #bbb;
   overflow: hidden;
   padding: 2.0em;
   width: 100%;
@@ -173,15 +176,6 @@ pre code:after {
     opacity: 1;
   }
 }
-/* @media(max-width: 20px) {
-  pre {
-    font-size: 10px;
-  }
-
-  .window {
-    width: 300px;
-  }
-} */
 
 .btn-bg{
   background: #222 !important
