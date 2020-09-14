@@ -87,6 +87,16 @@ body {
           flex: 1;
   text-align: center;
   padding: 0.3em;
+  color: #222;
+}
+
+.title:hover {
+  -webkit-box-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 0.3em;
+  color: #282c34;
+  text-decoration: none;
 }
 
 .icons {

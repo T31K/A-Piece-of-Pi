@@ -9,9 +9,12 @@ import About from "./About"
 import Blog from "./Blog"
 import '../App.css';
 
+
 class App extends Component{
   render(){
+    
       return (
+
         <Router>
             <div className ="bg">
               <Navbar className="bg " variant="dark" align="center" >

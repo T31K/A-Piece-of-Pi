@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import "../App.css"
+
+const link = '/blog/'
 class Blog extends Component {
     constructor(props){
       super(props)
@@ -12,6 +14,7 @@ class Blog extends Component {
       this.state = {
         posts: [],
       }
+    
 
     }
   
@@ -33,11 +36,18 @@ class Blog extends Component {
 
                 
                 <div className="window-inner mb-4 mx-auto" key={index}>
-                    <div className="icons"><span></span></div>
+                <div className="icons"><span></span></div>
                     
-                    <div className="title">_ {post.title.toLowerCase()}</div>
+                    
+                    <a href={link+post._id} className="title">
+                        <div>
+                            {post.title.toLowerCase()}
+                        </div>
+                    </a>
+                    
                         <pre className="lang-python">   
-
+                        
+                    
                             <code>
 
                                 <img className="picture rounded mx-auto" src={post.image} alt="image"/>
