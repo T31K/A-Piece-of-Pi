@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 
-
-
 import axios from 'axios'
 import {Row, Col, Container} from "react-bootstrap"
 
@@ -39,25 +37,17 @@ class Blog extends Component {
                     </div>
                     
                     <div className="content">
-                    <img className="picture rounded mx-auto" src={post.image} alt="image"/>
-                        <p>{post.description}</p>
-                        
+                        <img className="picture rounded mx-auto" src={post.image} alt="image"/>
+                            <p>{post.description}</p>
                     </div>
-            
-                            
-
-                                
-                           
-                      
+ 
                 </div>
                     ))}
     
-          
-            
-              
+
             </Col>
             </Row>
-            </Container>
+        </Container>
           
         )
     }

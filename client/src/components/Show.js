@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-
 import axios from "axios"
+
 import Home from "./Home"
 import About from "./About"
 import Blog from "./Blog"
@@ -40,6 +40,7 @@ handleDelete = (id) => {
                     
                     <div className="title">
                       >_{post.title}  
+        
                     </div>
                        
                      
@@ -51,6 +52,7 @@ handleDelete = (id) => {
                         
                             </div>
                             </div>
+
                          
            
           </Container>

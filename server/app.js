@@ -7,11 +7,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
-<<<<<<< HEAD
 const blogRouter = require('./routes/blog');
-=======
-const usersRouter = require('./routes/users');
->>>>>>> 6bb63c3a665e975dc81f54a59ea476800e25cf45
 
 const app = express();
 const cors = require('cors')
@@ -39,11 +35,7 @@ const Comment = require("./models/comment")
 
 // Routers
 app.use('/', indexRouter);
-<<<<<<< HEAD
 app.use('/blog', blogRouter);
-=======
-app.use('/users', usersRouter);
->>>>>>> 6bb63c3a665e975dc81f54a59ea476800e25cf45
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

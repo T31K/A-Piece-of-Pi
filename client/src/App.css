@@ -227,3 +227,9 @@ div a:hover {
   text-decoration: none;
   
 }
+
+.disqus-container{
+  margin: 0 auto;
+  width: 70%;
+  font-size: 5px;
+}
