@@ -7,7 +7,10 @@ import Navbar from 'react-bootstrap/Navbar'
 import Home from "./Home"
 import About from "./About"
 import Blog from "./Blog"
+<<<<<<< HEAD
 import Show from "./Show"
+=======
+>>>>>>> 6bb63c3a665e975dc81f54a59ea476800e25cf45
 import '../App.css';
 
 
@@ -27,12 +30,20 @@ class App extends Component{
                 </Nav>
               </Navbar>
               
+<<<<<<< HEAD
              
                 <Route exact path='/' component={Home} />
                 <Route exact path='/blog' component={Blog} />
                 <Route  path='/blog/:id' component={Show} />
                 <Route exact path='/about' component={About} />
             
+=======
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/blog' component={Blog} />
+                <Route exact path='/about' component={About} />
+              </Switch>  
+>>>>>>> 6bb63c3a665e975dc81f54a59ea476800e25cf45
             </div>
         </Router>
 
