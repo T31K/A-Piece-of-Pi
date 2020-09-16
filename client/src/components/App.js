@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import {Nav, Navbar} from 'react-bootstrap'
 
 import Home from "./Home"
 import About from "./About"
@@ -24,6 +23,7 @@ class App extends Component{
                   <li><Link to={'/'} className="nav-link"> /home </Link></li>
                   <li><Link to={'/blog'} className="nav-link"> /blog </Link></li>
                   <li><Link to={'/about'} className="nav-link"> /about </Link></li>
+                  
                 </Nav>
               </Navbar>
               

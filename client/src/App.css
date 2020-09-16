@@ -48,7 +48,8 @@
 
 
 /* Terminal Window */
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap);
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700); */
 * {
   padding: 0;
   margin: 0;
@@ -60,33 +61,25 @@
 
 body {
   -webkit-box-align: center;
-          align-items: center;
-  background: #09a3d5;
+      align-items: center;
+      background: #bb5c77;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #f2997b, #bb5c77, #924e7e);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to top, #924e7e, #bb5c77, #f2997b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  font: bold 16px "Lato", arial, sans-serif;
-  height: 100vh;
+      height: 100%;
+      background-attachment: fixed;
+
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+ 
   -webkit-box-pack: center;
           justify-content: center;
 
 }
 
 .window {
-  background: #ddd;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
-  position: relative;
- 
-
-}
-
-.window-inner {
-
-  background: #ddd;
-  border-radius: 10px;
+  background: #dddddd;
+  border-radius: 5px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -133,8 +126,8 @@ body {
 .icons span, .icons:before, .icons:after {
   display: inline-block;
   float: left;
-  width: 0.6em;
-  height: 0.6em;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 50%;
   margin-right: 0.3em;
 }
@@ -207,14 +200,49 @@ pre code:after {
   background: #222 !important
 }
 
-.content{
+.w-content{
   padding: 0.9em;
-  background: #222;
+  background: #dddddd;
   font-size: 0.7rem;
-  color: #bbb;
+  color: #222;
  
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.w-window-inner {
+
+  background: #dddddd;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  position: relative;
+ 
+}
+
+.b-content{
+  padding: 0.9em;
+  background: #282a37;
+  font-size: 0.7rem;
+  color: #222;
+ 
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.b-window-inner {
+
+  background: #282a37;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  position: relative;
 }
 
 div a {
@@ -228,8 +256,3 @@ div a:hover {
   
 }
 
-.disqus-container{
-  margin: 0 auto;
-  width: 70%;
-  font-size: 5px;
-}

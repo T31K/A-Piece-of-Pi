@@ -4,7 +4,7 @@ import axios from "axios"
 import Home from "./Home"
 import About from "./About"
 import Blog from "./Blog"
-import Show from "./Show"
+
 
 import {Row, Col, Container} from "react-bootstrap"
 import '../App.css';
@@ -35,7 +35,7 @@ handleDelete = (id) => {
         <div>
           <Container className="pl-3 pr-3 mx-auto">
         
-          <div className="window-inner">
+          <div className="w-window-inner">
                 <div className="icons"><span></span></div>
                     
                     <div className="title">
@@ -45,7 +45,7 @@ handleDelete = (id) => {
                        
                      
                        
-                           <div className="content">
+                           <div className="w-content">
                               <img className="picture rounded mx-auto" src={post.image} alt="image"/>
                               {post.description}  
                          
