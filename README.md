@@ -1,6 +1,7 @@
 # A Piece of Pi
 https://apieceofpi.com
 
+# WORK IN PROGRESS
 ## To Build
 
 
@@ -22,4 +23,6 @@ $ cd client
 $ npm install
 $ npm start
 ```
+
+
 
