@@ -19,7 +19,8 @@ class Blog extends Component {
   
     componentDidMount(){
         axios.get("/blog")
-             .then(res => this.setState({posts: res.data}))
+             .then(res => this.setState({posts: res.data.reverse()}))
+          
     }
     
     toggleDarkMode(){
@@ -33,31 +34,32 @@ class Blog extends Component {
         return(
     
         <Container className="pl-3 pr-3 mx-auto">
-            <Row>
-            <Col>
-                {this.state.posts.map( (post,index) => (
+        <Row>
+        <Col>
+            {this.state.posts.map( (post,index) => (
 
-                <div className ={this.state.darkmode ? "b-window-inner mb-4 mx-auto" : "w-window-inner mb-4 mx-auto"} key={index}>
+            <div className ={this.state.darkmode ? "b-window-inner mb-4 mx-auto" : "w-window-inner mb-4 mx-auto"} key={index}>
+            
+            <div className="icons"><span></span></div>
                 
-                <div className="icons"><span></span></div>
-                    
-                    <div className="title">
-                       >_ <a href={`/blog/${post._id}`}>{post.title.toLowerCase()}</a>  
-                    </div>
-                    
-                    <div className={this.state.darkmode ? "b-content" : "w-content"}>
-                        <img className="picture rounded mx-auto mb-3" src={post.image} alt="image"/>
-                            <p>{post.description}</p>
-                    </div>
-                    
-                    {/*<button onClick={this.toggleDarkMode}>hello</button>
-                */}
+                <div className="title">
+                   >_ <a href={`/blog/${post._id}`}>{post.title.toLowerCase()}</a>  
                 </div>
-                    ))}
-    
+                
+                <div className={this.state.darkmode ? "b-content" : "w-content"}>
+                    <img className="picture rounded mx-auto mb-3" src={post.image} alt="image"/>
+                        <p>{post.description}</p>
+                </div>
+                
+                {/*<button onClick={this.toggleDarkMode}>hello</button>
+            */}
+            </div>
+                ))}
 
-            </Col>
-            </Row>
+
+        </Col>
+        </Row>
+
         </Container>
           
         )

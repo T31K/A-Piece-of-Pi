@@ -1,24 +1,21 @@
-
+// Dependencies Imports
 const env = require('dotenv').config()
-const createError = require('http-errors');
 const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
 const mongoose = require('mongoose');
-const indexRouter = require('./routes/index');
-const blogRouter = require('./routes/blog');
+const path = require("path");
+const logger = require('morgan');
 
+// Express Configs
 const app = express();
+app.use(express.json());
 const cors = require('cors')
 app.use(cors());
-// View Engine COnfig
+
+// View Engine Configs
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -29,39 +26,21 @@ mongoose.connect(process.env.db_uri, {
 })
 .then(()=> console.log("Connected to DB"))
 .catch(error => console.log(error.message));
-const Blogpost = require("./models/blogpost")
-const User = require("./models/user")
-const Comment = require("./models/comment")
 
-// Routers
-app.use('/', indexRouter);
-app.use('/blog', blogRouter);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
+// Error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  // Render Error Page
   res.status(err.status || 500);
   res.render('error');
 });
 
-// const data = {
-//     title: "Hello, world",
-//     image: "test img",
-//     description: "seeding database..",
-// }
+// Router Configs
+const blogRouter = require('./routes/blog');
+app.use('/blog', blogRouter);
 
-// Blogpost.create(data, (err) => {
-//   if (err){
-//     console.log(err)
-// }})
 
 module.exports = app;

@@ -1,23 +1,18 @@
-const express = require('express');
-const router = express.Router();
-const mongoose = require('mongoose')
+const router = require('express').Router()
 const Blogpost = require('../models/blogpost')
 
-/* GET blogs listing. */
+// GET All blogs (/blog)
 router.get('/', (req, res, next) => {
-  Blogpost.find((err, blogpost) => {
-    res.json(blogpost)
-    console.log(blogpost)
-  })
-});
-
-router.get("/:id" , (req, res, next) => {
-  Blogpost.findById(req.params.id).exec( (err, foundBlogpost) => {
-    if (err){
-      res.send("404 not found")
-    } else {
-      res.json(foundBlogpost)
-    }
-  })
+  Blogpost.find()
+    .then(( blogposts) => res.json(blogposts))
+    .catch( (err) => res.status(400).json("Error" + err));
 })
+
+// GET specific blogs (/blog/....)
+router.get("/:id" , (req, res, next) => {
+  Blogpost.findById(req.params.id)
+      .then((blogposts => res.json(blogposts)))
+      .catch( (err) => res.status(400).json("Error" + err))
+})
+
 module.exports = router;
