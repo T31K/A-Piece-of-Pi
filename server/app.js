@@ -1,6 +1,6 @@
 // Dependencies Imports
-const app = express();
 const express = require('express');
+const app = express();
 
 // Misc
 const path = require("path");
