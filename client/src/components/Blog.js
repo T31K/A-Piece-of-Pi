@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 import axios from 'axios'
 import {Row, Col, Container} from "react-bootstrap"
-
+import BlogNew from "./BlogNew"
 import "../App.css"
 
 const link = '/blog/'
@@ -56,7 +56,7 @@ class Blog extends Component {
             </div>
                 ))}
 
-
+<BlogNew />
         </Col>
         </Row>
 
