@@ -1,22 +1,22 @@
 // Dependencies Imports
-const env = require('dotenv').config()
+const app = express();
 const express = require('express');
-const mongoose = require('mongoose');
+
+// Misc
 const path = require("path");
 const logger = require('morgan');
-const bodyParser = require("body-parser");
+const env = require('dotenv').config()
 const cors = require('cors')
-const passport = require('passport')
-
-// Express Configs
-const app = express();
-// app.use(express.json());
 app.use(cors());
+
+// BodyParser Configs
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // Passport  Configs
+const passport = require('passport')
 app.use(passport.initialize());
 require('./middleware/passport')(passport);
 
@@ -28,7 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// Mongoose Config
+// Mongoose Configs
+const mongoose = require('mongoose');
 mongoose.connect(process.env.db_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -48,12 +49,8 @@ app.use(function(err, req, res, next) {
 });
 
 // Router Configs
-// const blogRouter = require('./routes/api/post');
-// app.use('/blog', blogRouter);
 app.use('/api/users/', require("./routes/api/users"));
 app.use('/api/posts/', require("./routes/api/posts"));
-// const Blogpost = require('./models/Post')
-
 
 
 module.exports = app;
