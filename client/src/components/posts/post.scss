@@ -53,6 +53,8 @@ a:link {
    -webkit-box-direction: normal;
            flex-flow: row wrap;
    position: relative;
+   margin-left: 50px;
+   margin-right: 50px;
  }
 
  .title {
@@ -92,3 +94,7 @@ a:link {
    margin-right: 0.3em;
  }
  
+
+ .body-text{
+    font-size: 0.65rem;
+ }

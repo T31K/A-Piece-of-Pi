@@ -8,7 +8,7 @@ const Post = ({ post }) => {
    const postDate = getFormattedDate(post.date);
    return (
      <div>
-         
+       
             <div className="window mr-3 ml-3">
             <div class="icons"><span></span></div>
                <div className="title"> >_ {post.title}</div>

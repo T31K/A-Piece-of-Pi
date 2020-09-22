@@ -5,15 +5,11 @@ import { Link } from "react-router-dom";
 
 const Navigationbar = ({ auth, onClick }) => (
    <Navbar
-      bg="dark"
-      variant="dark"
       expand="sm"
       className="mb-3"
-      style={{ minHeight: "4rem" }}
+      style={{ minHeight: "3rem" }}
    >
-      <Link to="/blog">
-      
-      </Link>
+     <Link to="/blog"></Link>
       <Nav className="ml-auto">
          {auth ? (
             <Link to="/logout">

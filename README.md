@@ -25,4 +25,11 @@ $ npm start
 ```
 
 
+### Features
+- [ ] Comments
+- [x] Search
+- [x] Add Posts
+- [x] User Auth
+
+
 

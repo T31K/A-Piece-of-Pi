@@ -7,15 +7,20 @@ import "./post.scss";
 const ViewPost = ({ post, auth, onDelete, onEdit }) => {
    const postDate = getFormattedDate(post.date);
    return (
-      <Container className="mt-4 viewPost">
-         <Row>
-            <Col className="text-center postTitle">
-               <h2>{post.title}</h2>
-            </Col>
-         </Row>
-         <Row className="my-4" style={{ whiteSpace: "pre-wrap" }}>
-            <Col>{post.body}</Col>
-         </Row>
+      <div className="window mr-3 ml-3">
+         <div class="icons"><span></span></div>
+            <Container>
+      
+       
+            <div className="title">
+               <h4>{post.title}</h4>
+            </div>
+      
+       
+         
+         <div className="body-text">
+            {post.body}
+         </div>
          <Row className="d-flex flex-column font-italic footerStyle">
             <Col>Created by : {post.author}</Col>
             <Col>Date: {postDate}</Col>
@@ -37,6 +42,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
             </Row>
          )}
       </Container>
+      </div>
    );
 };
 
