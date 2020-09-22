@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Post from "./Post";
 import PropTypes from "prop-types";
 
@@ -7,12 +8,16 @@ import "./post.scss";
 
 const ListPost = ({ posts }) => {
    return (
-      <div className="grid-container mx-3">
-         {posts.map(post => (
-            <Link to={`/blog/post/${post._id}`} key={post._id}>
-               <Post post={post} />
-            </Link>
-         ))}
+      <div>
+         <Container>
+            {posts.map(post => (
+               <div className="mb-3 rounded">
+               <Link to={`/blog/post/${post._id}`} key={post._id}>
+                  <Post post={post} />
+               </Link>
+               </div>
+            ))}
+         </Container>
       </div>
    );
 };

@@ -12,15 +12,7 @@ const Navigationbar = ({ auth, onClick }) => (
       style={{ minHeight: "4rem" }}
    >
       <Link to="/blog">
-         <Navbar.Brand>
-            <img
-               src="https://react-bootstrap.github.io/logo.svg"
-               style={{ height: 30, width: 30 }}
-               className="d-inline-block align-top"
-               alt=""
-            />
-            {" Bloggy "}
-         </Navbar.Brand>
+      
       </Link>
       <Nav className="ml-auto">
          {auth ? (
@@ -35,8 +27,8 @@ const Navigationbar = ({ auth, onClick }) => (
             </Link>
          ) : (
             <Link to="/login">
-               <Button variant="outline-light" className="mr-sm-2">
-                  Login
+               <Button className="btn-round">
+                  
                </Button>
             </Link>
          )}

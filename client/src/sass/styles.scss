@@ -7,7 +7,20 @@ body {
    padding: 0;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-}
+   -webkit-box-align: center;
+   background: $raspberry;
+   background: -webkit-linear-gradient(to left, $orange, $raspberry, $indigo); 
+   background: linear-gradient(to top, $indigo, $raspberry, $orange);
+   height: 100%;
+   background-attachment: fixed;
+
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+
+   -webkit-box-pack: center;
+         justify-content: center;
+
+   }
 
 a:link {
    color: $themeColor;
@@ -47,4 +60,16 @@ a:link {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
    background: #555;
+}
+
+.btn-round{
+   height: 1.5rem;
+   width: 1.5rem;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+}
+
+.red{
+   background:red;
 }
