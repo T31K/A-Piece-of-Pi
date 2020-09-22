@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Post from "./Post";
 import PropTypes from "prop-types";
+import Container from "react-bootstrap/Container";
 import "./post.scss";
 
 const ListPost = ({ posts }) => {

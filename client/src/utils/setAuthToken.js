@@ -1,6 +1,3 @@
-// set auth token when log in 
-// remove auth token when  log out
-
 import axios from "axios";
 
 const setAuthToken = token => {
