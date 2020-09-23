@@ -32,4 +32,12 @@ $ npm start
 - [ ] Comments
 - [ ] WYSWYG editor
 
-
+### Frameworks/Library Used
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+- Passport.js
+- bcrypt.js
+- jsonwebtoken
+- sass
