@@ -2,16 +2,13 @@
 @import "./mixins";
 
 body {
-  
    // -webkit-font-smoothing: antialiased;
    // -moz-osx-font-smoothing: grayscale;
    // -webkit-box-align: center;
-  
    background-image: -webkit-radial-gradient(top, circle cover, #00d2ff 0%, #3a7bd5 80%);
-   
    background-attachment: fixed;
 	justify-content: center;
-   font-family: 'Open Sans', sans-serif;
+   font-family: $open-sans;
    font-weight: 300;
 
  

@@ -10,13 +10,17 @@ const ListPost = ({ posts }) => {
    return (
       <div>
          <Container>
+         <div className="window ">
+         <div class="icons"><span></span></div>
             {posts.map(post => (
-               <div className="mb-3 rounded">
+               
+               
                <Link to={`/blog/post/${post._id}`} key={post._id}>
-                  <Post post={post} />
+                  <Post post={post} /> 
                </Link>
+               ))}
                </div>
-            ))}
+          
          </Container>
       </div>
    );

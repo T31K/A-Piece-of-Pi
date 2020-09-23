@@ -9,9 +9,12 @@ const Post = ({ post }) => {
    return (
      <div>
        
-            <div className="window mr-3 ml-3">
-            <div class="icons"><span></span></div>
-               <div className="title"> >_ {post.title}</div>
+            
+               <div className="title">
+                  <h5>  >_ {post.title} </h5>
+                  <p>{postDate} | {post.author}</p>
+                  <p>{post.body.slice(0,300)+ ' read more...'}</p>
+               </div>
    <br></br>
    <br></br>
    <br></br>
@@ -19,12 +22,12 @@ const Post = ({ post }) => {
    <br></br>
            
             <div>
-           {//}   <div className="title">{postDate}</div> 
-   }
+          
+  
             
          </div>
       </div>
-      </div>
+     
   
    );
 };

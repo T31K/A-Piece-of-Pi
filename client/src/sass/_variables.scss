@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+
+/* Font */
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
    sans-serif;
-
+$open-sans: 'Open Sans', sans-serif;
 /* Colours */
 $light: #f8f9fa;
 $themeColor: #17a2b8;
 $primaryColor: #333;
-$darkgrey   : #222;
+$darkgrey   : #262832;
 $subtitleColor: #555;
 $mediumgrey: #999;
 $lightgrey: #ddd;

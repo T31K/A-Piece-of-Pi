@@ -14,6 +14,8 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
        
             <div className="title">
                <h4>{post.title}</h4>
+               <p>{post.author} | {postDate}</p>
+     
             </div>
       
        
@@ -22,8 +24,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
             {post.body}
          </div>
          <Row className="d-flex flex-column font-italic footerStyle">
-            <Col>Created by : {post.author}</Col>
-            <Col>Date: {postDate}</Col>
+            
          </Row>
          {auth && (
             <Row className="mt-4">
