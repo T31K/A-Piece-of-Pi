@@ -39,5 +39,5 @@ $ npm start
 - Node.js
 - Passport.js
 - bcrypt.js
-- jsonwebtoken
+- Jsonwebtoken
 - sass
