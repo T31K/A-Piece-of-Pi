@@ -13,8 +13,8 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
       
        
             <div className="title">
-               <h4>{post.title}</h4>
-               <p>{post.author} | {postDate}</p>
+               <h4 className="title-text">{post.title}</h4>
+               <p className="date-text">{post.author} | {postDate}</p>
      
             </div>
       

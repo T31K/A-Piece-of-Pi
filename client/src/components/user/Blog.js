@@ -24,26 +24,7 @@ const Blog = ({ posts, auth }) => {
    return (
       <React.Fragment>
          <div className="mx-3">
-            <Nav className="justify-content-between mt-2 mb-2">
-               {auth && (
-                  <Link to="/blog/post/create">
-                     <Button variant="light" className="styleBtn">
-                        +
-                     </Button>
-                  </Link>
-               )}
-               <Form>
-                  <Form.Group controlId="searchBar">
-                     <Form.Control
-                        type="text"
-                        placeholder="Search Post..."
-                        style={{ height: 40 }}
-                        ref={inputRef}
-                        onChange={handleChange}
-                     />
-                  </Form.Group>
-               </Form>
-            </Nav>
+            
          </div>
          {posts.length > 0 ? (
             <ListPost

@@ -1,35 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav, Button, Form, FormControl, Container} from "react-bootstrap";
 import { Link } from "react-router-dom";
+import './nav.scss'
 
 const Navigationbar = ({ auth, onClick }) => (
-   <Navbar
-      expand="sm"
-      className="mb-3"
-      style={{ minHeight: "3rem" }}
-   >
+   <Container>
+   <Navbar bg="none" variant="dark" >
+  
+   <Nav className="m-auto">
+     <Nav.Link href="/">>home</Nav.Link>
+     <Nav.Link href="/blog">>blog</Nav.Link>
+     <Nav.Link href="/about">>about</Nav.Link>
+
      <Link to="/blog"></Link>
       <Nav className="ml-auto">
          {auth ? (
-            <Link to="/logout">
-               <Button
-                  variant="outline-light"
-                  className="mr-sm-2"
-                  onClick={onClick}
-               >
-                  Logout
-               </Button>
-            </Link>
+            <Nav.Link to="/logout" onClick={onClick}> {'< ' + 'logout'} </Nav.Link>
          ) : (
-            <Link to="/login">
-               <Button className="btn-round">
-                  
-               </Button>
-            </Link>
-         )}
-      </Nav>
-   </Navbar>
+            <Nav.Link to="/login"> > login </Nav.Link> 
+            )}
+   </Nav>
+   </Nav>
+   
+ </Navbar>
+ </Container>
 );
 
 Navigationbar.propTypes = {

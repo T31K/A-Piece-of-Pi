@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Card from "react-bootstrap/Card";
+import {Container} from "react-bootstrap";
 import getFormattedDate from "../../utils/getFormattedDate";
 import "./post.scss";
 
@@ -8,24 +8,32 @@ const Post = ({ post }) => {
    const postDate = getFormattedDate(post.date);
    return (
      <div>
-       
-            
-               <div className="title">
-                  <h5>  >_ {post.title} </h5>
-                  <p>{postDate} | {post.author}</p>
-                  <p>{post.body.slice(0,300)+ ' read more...'}</p>
-               </div>
-   <br></br>
-   <br></br>
-   <br></br>
-   <br></br>
-   <br></br>
-           
-            <div>
-          
-  
+     <Container>
+         <div className="mb-3">
+         <div className='fakeMenu'>
+            <div className="fakeButtons fakeClose"></div>
+            <div className="fakeButtons fakeMinimize"></div>
+            <div className="fakeButtons fakeZoom"></div>
             
          </div>
+         
+         <div className="fakeScreen">
+            <p className='line1 title-text'> >_ {post.title} <span className="cursor1">_</span> </p>
+            <p className="line2 date-text">{postDate} | {post.author}<span className="cursor2">_</span></p>
+            <p className="line2 body-text">{post.body.slice(0,300)+ ' read more...'}</p>
+         </div>
+      </div>
+      
+      
+                  
+             
+                  
+              
+
+            <div>
+
+         </div>
+         </Container>
       </div>
      
   

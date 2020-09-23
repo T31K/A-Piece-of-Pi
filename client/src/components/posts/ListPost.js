@@ -9,9 +9,8 @@ import "./post.scss";
 const ListPost = ({ posts }) => {
    return (
       <div>
-         <Container>
-         <div className="window ">
-         <div class="icons"><span></span></div>
+         
+       
             {posts.map(post => (
                
                
@@ -19,9 +18,9 @@ const ListPost = ({ posts }) => {
                   <Post post={post} /> 
                </Link>
                ))}
-               </div>
           
-         </Container>
+          
+      
       </div>
    );
 };
