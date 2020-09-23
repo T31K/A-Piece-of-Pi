@@ -2,24 +2,19 @@
 @import "./mixins";
 
 body {
-   font-family: $font-stack;
-   margin: 0;
-   padding: 0;
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   -webkit-box-align: center;
-   background: $raspberry;
-   background: -webkit-linear-gradient(to left, $orange, $raspberry, $indigo); 
-   background: linear-gradient(to top, $indigo, $raspberry, $orange);
-   height: 100%;
+  
+   // -webkit-font-smoothing: antialiased;
+   // -moz-osx-font-smoothing: grayscale;
+   // -webkit-box-align: center;
+  
+   background-image: -webkit-radial-gradient(top, circle cover, #00d2ff 0%, #3a7bd5 80%);
+   
    background-attachment: fixed;
-
+	justify-content: center;
    font-family: 'Open Sans', sans-serif;
    font-weight: 300;
 
-   -webkit-box-pack: center;
-         justify-content: center;
-
+ 
    }
 
 a:link {
