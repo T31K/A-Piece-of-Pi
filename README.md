@@ -30,7 +30,7 @@ $ npm start
 - [x] Add Posts
 - [x] User Auth
 - [ ] Comments
-- [ ] WYSWYG editor
+- [x] WYSWYG editor
 
 ### Frameworks/Library Used
 - MongoDB
