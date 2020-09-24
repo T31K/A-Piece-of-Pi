@@ -2,8 +2,12 @@
 https://apieceofpi.com
 
 # WORK IN PROGRESS
-## To Build
 
+# PROJECT GOAL
+###### As a ex airline flight crew, I have stayed in many hotels throughout my career, even so sometimes we
+
+
+## To Build
 
 ### Clone Repo
 ```sh
