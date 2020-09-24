@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import { clearErrors } from "../../actions/errorActions";
 
+
 const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
    const [user, setUser] = useState({
       email: "",

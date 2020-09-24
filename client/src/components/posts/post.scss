@@ -135,7 +135,19 @@ a:link {
    border-bottom-left-radius: 5px;
    border-bottom-right-radius: 5px;
  }
- 
+
+ .fakeFormScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ .textarea{
+   resize: none !important;
+ }
  
  
  span {
@@ -336,9 +348,33 @@ a:link {
  .edit-btn{
    color: white;
    background: none;
+   border: none;
  }
 
  .edit-btn:hover{
   color: $blue;
   background: none;
+   border: none;
+
+}
+
+.form-custom{
+  background: none;
+  border: none;
+}
+
+.input-custom{
+  border:none;
+  background: none;
+  color: $lightgrey;
+}
+
+textarea.form-control{
+  resize:none !important;
+  
+}
+
+.form-control{
+  background: rgba(221,221,221,0.8);
+ 
 }

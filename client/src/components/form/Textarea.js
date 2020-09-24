@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
-import CKEditor from 'ckeditor4-react';
 
 
 const Textarea = ({ name, placeholder, value, onChange, onBlur, text }) => {
@@ -13,7 +12,7 @@ const Textarea = ({ name, placeholder, value, onChange, onBlur, text }) => {
          <Form.Control
             name={name}
             as="textarea"
-            rows="10"
+            rows="15"
             placeholder={placeholder}
             value={value}
             onChange={onChange}

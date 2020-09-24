@@ -9,7 +9,7 @@ import "./post.scss";
 const ViewPost = ({ post, auth, onDelete, onEdit }) => {
    const postDate = getFormattedDate(post.date);
    return (
-      <div className="window mr-3 ml-3">
+      <div className="window mr-3 ml-3 pb-3">
          <div class="icons"><span></span></div>
             <Container>
       

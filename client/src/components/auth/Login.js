@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignInAlt} from '@fortawesome/free-solid-svg-icons'
 import Input from "../form/Input";
+import "./loginsignup.scss"
 import {
    Card,
    Button,
@@ -16,25 +19,25 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit }) => {
    const { email, password, errors } = user;
    return (
       <Container>
+      <div className='fakeMenu'>
+            <div className="fakeButtons fakeClose"></div>
+            <div className="fakeButtons fakeMinimize"></div>
+            <div className="fakeButtons fakeZoom"></div>
+            
+      </div>
+
+      <div className='fakeScreen'>
          <Row>
             <Col className="mx-auto" sm={11} md={7} lg={5}>
-               <Card className="my-4">
+               <Card className="form-custom">
                   <Form
                      noValidate
                      onSubmit={onSubmit}
-                     className="p-sm-3 p-xs-1"
+                     className='input-custom'
                   >
-                     <Card.Body>
-                        <Card.Title
-                           as="h3"
-                           className="text-center theme-color mb-4 mt-2"
-                        >
-                           Login
-                        </Card.Title>
-                        {message.length > 0 && (
-                           <Alert variant="success">{message}</Alert>
-                        )}
+                     
                         <Input
+                           className="input-custom"
                            name="email"
                            type="email"
                            placeholder="Enter Email"
@@ -60,25 +63,24 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit }) => {
                               error: errors.password
                            }}
                         />
-                        <Button
-                           variant="info"
-                           type="submit"
-                           className="mt-3"
-                           disabled={loading}
-                        >
-                           Submit
+
+                        <Button type="submit" className='edit-btn' >
+                           <FontAwesomeIcon
+                              icon={faSignInAlt} 
+                              disabled={loading}
+                            />
                         </Button>
 
-                        <Card.Text className="mt-2">
-                           Don't have an account?{" "}
-                           <Link to={"/signup"}>SignUp</Link>
-                        </Card.Text>
-                     </Card.Body>
+                        
+
+                       
                   </Form>
                </Card>
             </Col>
          </Row>
+         </div>
       </Container>
+      
    );
 };
 

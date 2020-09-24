@@ -1,20 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignInAlt} from '@fortawesome/free-solid-svg-icons'
 import Input from "../form/Input";
 import Textarea from "../form/Textarea";
+import "./post.scss"
 
 const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
    const { title, body, errors } = post;
    return (
       <Container>
-         <Row>
-            <Col className="mx-auto">
-               <Form noValidate onSubmit={onSubmit} className="p-sm-3 p-xs-1">
+         <div className='fakeMenu'>
+            <div className="fakeButtons fakeClose"></div>
+            <div className="fakeButtons fakeMinimize"></div>
+            <div className="fakeButtons fakeZoom"></div>
+         </div>
+
+         <div className='fakeFormScreen'>
+         <Container>
+               <Form noValidate onSubmit={onSubmit} className="text-white text-custom ">
                   <Input
                      name="title"
                      type="text"
                      placeholder="Enter Post Title"
+                     className="text-custom"
                      value={title}
                      onChange={onChange}
                      onBlur={onBlur}
@@ -28,25 +38,30 @@ const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
                      name="body"
                      placeholder="Write your post here..."
                      value={body}
+                     className="textarea"
                      onChange={onChange}
-                     onBlur={onBlur}
-                     text={{
-                        module: "post",
+                        onBlur={onBlur}
+                        text={{
+                           module: "post",
                         label: "Description",
                         error: errors.body
                      }}
+                     
                   />
-                  <Button
-                     variant="outline-info"
-                     type="submit"
-                     disabled={loading}
-                     className="mt-3"
-                  >
-                     Submit
-                  </Button>
+                  <Button type="submit" className='edit-btn' >
+                           <FontAwesomeIcon
+                              icon={faSignInAlt} 
+                              disabled={loading}
+                            />
+                        </Button>
+
+                
+                 
                </Form>
-            </Col>
-         </Row>
+      </Container>
+          
+         </div>
+         
       </Container>
    );
 };

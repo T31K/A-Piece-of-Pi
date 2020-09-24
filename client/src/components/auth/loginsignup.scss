@@ -215,3 +215,24 @@
       width: 17em;
     }
   }
+
+  .input-custom{
+    border:none;
+    background: none;
+    color: $lightgrey;
+  }
+
+
+ .edit-btn{
+  color: white;
+  background: none;
+}
+
+.edit-btn:hover{
+
+ background: none;
+}
+
+.edit-btn:active{
+  border: none;
+}
