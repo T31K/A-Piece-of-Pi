@@ -32,7 +32,7 @@ $ ## set up MongoDB URI
 $ db_uri = ''
 $ ## set up JWT secret
 $ SECRET = ''
-
+```
 
 ### Features
 - [x] Search
