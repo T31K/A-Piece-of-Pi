@@ -6,6 +6,8 @@ import './nav.scss'
 
 const Navigationbar = ({ auth, onClick }) => (
    <Container>
+  
+
    <Navbar bg="none" variant="dark" >
   
    <Nav className="m-auto">
@@ -18,7 +20,8 @@ const Navigationbar = ({ auth, onClick }) => (
          {auth ? (
             <Nav.Link to="/logout" onClick={onClick}> {'< ' + 'logout'} </Nav.Link>
          ) : (
-            <Nav.Link to="/login"> > login </Nav.Link> 
+            <Nav.Link to="/login"> >login </Nav.Link> 
+            
             )}
    </Nav>
    </Nav>

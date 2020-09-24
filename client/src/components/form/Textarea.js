@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form";
+import CKEditor from 'ckeditor4-react';
+
 
 const Textarea = ({ name, placeholder, value, onChange, onBlur, text }) => {
    return (
+ <div>
+   
       <Form.Group controlId={text.module + name}>
          <Form.Label>{text.label}</Form.Label>
          <Form.Control
@@ -20,6 +24,7 @@ const Textarea = ({ name, placeholder, value, onChange, onBlur, text }) => {
             {text.error}
          </Form.Control.Feedback>
       </Form.Group>
+      </div>
    );
 };
 

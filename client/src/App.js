@@ -8,6 +8,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import LoginPage from "./containers/auth/LoginPage";
 import SignUpPage from "./containers/auth/SignUpPage";
+import AboutPage from "./containers/pages/AboutPage"
 
 import ProgressBar from "./containers/layout/ProgressBar";
 import Navbar from "./containers/layout/Navbar";
@@ -18,7 +19,6 @@ import PrivateRoute from "./utils/PrivateRoute";
 import ViewPostPage from "./containers/posts/ViewPostPage";
 import CreatePostPage from "./containers/posts/CreatePostPage";
 import UpdatePostPage from "./containers/posts/UpdatePostPage";
-
 if (localStorage.jwtToken) {
    const token = localStorage.jwtToken;
    setAuthToken(token);
@@ -41,6 +41,7 @@ const App = () => {
                <Route path="/" exact component={Landing} />
                <Route path="/login" component={LoginPage} />
                <Route path="/signup" component={SignUpPage} />
+               <Route path="/about" component={AboutPage} />
                <PrivateRoute exact path="/blog" component={BlogPage} />
                <PrivateRoute
                   exact
@@ -55,6 +56,7 @@ const App = () => {
                <Route exact path="/blog/post/:id" component={ViewPostPage} />
                <Route path="/blog/:author" component={BlogPage} />
                <Redirect from="*" to="/" />
+               
             </Switch>
          </BrowserRouter>
       </Provider>

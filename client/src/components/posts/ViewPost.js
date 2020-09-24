@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import getFormattedDate from "../../utils/getFormattedDate";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
 import "./post.scss";
 
 const ViewPost = ({ post, auth, onDelete, onEdit }) => {
@@ -18,7 +20,6 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
      
             </div>
       
-       
          
          <div className="body-text">
             {post.body}
@@ -29,16 +30,24 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
          {auth && (
             <Row className="mt-4">
                <Col className="text-center">
-                  <Button
-                     className="mr-2"
+
+
+               <FontAwesomeIcon 
+                     icon={faEdit} 
+                     className='edit-btn mb-2' 
                      variant="outline-info"
                      onClick={onEdit}
-                  >
-                     Edit
-                  </Button>
-                  <Button variant="outline-danger" onClick={onDelete}>
-                     Delete
-                  </Button>
+                     />
+
+                     <FontAwesomeIcon 
+                     icon={faTrash} 
+                     className='edit-btn ml-2 mb-2' 
+                     variant="outline-info"
+                     onClick={onDelete}
+
+                     />
+
+            
                </Col>
             </Row>
          )}

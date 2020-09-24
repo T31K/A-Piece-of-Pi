@@ -17,22 +17,12 @@ const Post = ({ post }) => {
             
          </div>
          
-         <div className="fakeScreen">
-            <p className='line1 title-text'> >_ {post.title} <span className="cursor1">_</span> </p>
+         <div className='fakeScreen'>
+            <p className='line1 title-text '> >_ {post.title} <span className="cursor1">_</span> </p>
             <p className="line2 date-text">{postDate} | {post.author}<span className="cursor2">_</span></p>
-            <p className="line2 body-text">{post.body.slice(0,300)+ ' read more...'}</p>
+        
          </div>
       </div>
-      
-      
-                  
-             
-                  
-              
-
-            <div>
-
-         </div>
          </Container>
       </div>
      

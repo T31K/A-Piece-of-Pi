@@ -9,18 +9,12 @@ import "./post.scss";
 const ListPost = ({ posts }) => {
    return (
       <div>
-         
-       
             {posts.map(post => (
-               
-               
+    
                <Link to={`/blog/post/${post._id}`} key={post._id}>
                   <Post post={post} /> 
                </Link>
                ))}
-          
-          
-      
       </div>
    );
 };
