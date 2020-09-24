@@ -24,6 +24,15 @@ $ npm install
 $ npm start
 ```
 
+### Enter environment variables
+```sh
+$ ## Create .env in root folder
+$ 
+$ ## set up MongoDB URI
+$ db_uri = ''
+$ ## set up JWT secret
+$ SECRET = ''
+
 
 ### Features
 - [x] Search
