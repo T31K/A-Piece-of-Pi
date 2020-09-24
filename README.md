@@ -39,7 +39,7 @@ $ SECRET = ''
 - [x] Add Posts
 - [x] User Auth
 - [ ] Comments
-- [x] WYSWYG editor
+
 
 ### Frameworks/Library Used
 - MongoDB
