@@ -13,6 +13,7 @@ const Textarea = ({ name, placeholder, value, onChange, onBlur, text }) => {
             name={name}
             as="textarea"
             rows="15"
+            
             placeholder={placeholder}
             value={value}
             onChange={onChange}
