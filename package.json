@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client": "cd client && npm start",
-    "server": "node ./bin/www",
+    "client": "cd client && npm install && npm start",
+    "server": "npm install && node ./bin/www",
     "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
