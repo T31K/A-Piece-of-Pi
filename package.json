@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client": "cd client && npm install && npm start",
-    "server": "cd .. && npm install && node ./bin/www",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "server": "node ./bin/www",
+    [...],
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
