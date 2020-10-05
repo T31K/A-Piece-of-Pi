@@ -6,7 +6,7 @@ const Progress = () => {
       <div style={{ backgroundColor: "lightgrey", overflow: "hidden" }}>
          <ProgressBar
             style={{ height: 3, background: "lightgrey" }}
-            now={75}
+            now={75} 
             className="progressBar"
             variant="info"
          />
