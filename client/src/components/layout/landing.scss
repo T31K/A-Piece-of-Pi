@@ -1,12 +1,11 @@
 @import "../../sass/styles";
 
-
   
   .fakeButtons {
     height: 0.6em;
     width: 0.6em;
     border-radius: 50%;
-    background-color: #ff3b47;
+    background-color: blue;
     border :none;
     display: inline-block;
     margin-left: 0.5em;
@@ -15,7 +14,7 @@
   
   .fakeMinimize {
     
-    background-color: #ffc100;
+    background-color: red;
     border :none;
   }
   
@@ -29,7 +28,7 @@
     width: 350px;
     box-sizing: border-box;
     height: 25px;
-    background-color: #ddd;
+    background-color: #ff3b47;
     margin: 0 auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
